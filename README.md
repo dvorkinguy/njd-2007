@@ -19,3 +19,6 @@ kubectl config get-contexts
 kubectl config use-context <CONTEXT_NAME>
 kubectl config current-context
 
+/home/mr.wolf/Documents/devops/projects/sqlink/njd-2007/terraform-iac-non-prod/dev/main
+aws sts get-caller-identity | jq
+

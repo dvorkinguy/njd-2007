@@ -1,15 +1,15 @@
 locals {
-  source_url        = "git::git@gitlab.com:bakavets/terraform-modules.git"
+  source_url        = "git::git@github.com:dvorkinguy/njd-2007.git"
   source_version    = "v0.1.0"
   deployment_prefix = "main-prod"
-  aws_region        = "eu-west-1"
+  aws_region        = "us-west-2"
   eks_cluster_name  = "${local.deployment_prefix}-eks-cluster"
   default_tags = {
     "TerminationDate"  = "Permanent",
     "Environment"      = "Production",
-    "Team"             = "DevOps",
-    "DeployedBy"       = "Terraform",
-    "OwnerEmail"       = "bakavets.com@gmail.com"
+    "Team"             = "NotJustDevOps",
+    "DeployedBy"       = "Dvorkin-Terraform",
+    "OwnerEmail"       = "notjustdevops@gmail.com"
     "DeploymentPrefix" = local.deployment_prefix
   }
 }
