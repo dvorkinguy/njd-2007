@@ -5,6 +5,6 @@ terraform {
     dynamodb_table = "main-prod-dvorkinguy-terraform-states-backend-demo"
     encrypt        = true
     key            = "./terraform.tfstate"
-    region         = "us-east-1"
+    region         = "us-west-2"
   }
 }
