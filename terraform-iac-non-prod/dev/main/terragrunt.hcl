@@ -1,6 +1,6 @@
 locals {
   source_url        = "git::git@github.com:dvorkinguy/njd-2007.git"
-  source_version    = "v0.0.1"
+  source_version    = "v0.1.0"
   deployment_prefix = "main-dev"
   aws_region        = "us-west-2"
   eks_cluster_name  = "${local.deployment_prefix}-eks-cluster"
@@ -8,11 +8,12 @@ locals {
     "TerminationDate"  = "Permanent",
     "Environment"      = "Development",
     "Team"             = "NotJustDevOps",
-    "DeployedBy"       = "Dvorkin-Terraform",
-    "OwnerEmail"       = "notjustdevops@gmail.com"
+    "DeployedBy"       = "Dvorkin_Terraform",
+    "OwnerEmail"       = "notjustdevops@gmail.com",
     "DeploymentPrefix" = local.deployment_prefix
   }
 }
+
 
 # Configure Terragrunt to automatically store tfstate files in an S3 bucket
 remote_state {
