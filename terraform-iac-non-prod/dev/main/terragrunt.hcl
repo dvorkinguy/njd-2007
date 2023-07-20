@@ -1,7 +1,7 @@
 locals {
   source_url        = "git::git@github.com:dvorkinguy/njd-2007.git"
-  source_version    = "v0.1.2"
-  deployment_prefix = "main-dev"
+  source_version    = "v0.1.3"
+  deployment_prefix = "main-dev-dvorkinguy"
   aws_region        = "us-west-2"
   eks_cluster_name  = "${local.deployment_prefix}-eks-cluster"
   default_tags = {
