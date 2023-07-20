@@ -39,11 +39,12 @@ inputs = {
   additional_eks_managed_node_sg_ids     = [dependency.sg.outputs.all_worker_node_groups_sg_id]
   kms_key_id                             = dependency.kms.outputs.kms_deployment_key_arn
   cluster_version                        = "1.27"
-  mgmt_instance_types                    = ["t3.xlarge"]
-  mgmt_min_size                          = 2
-  mgmt_max_size                          = 2
-  mgmt_desired_size                      = 2
+  mgmt_instance_types                    = ["t2.medium"]
+  mgmt_min_size                          = 4
+  mgmt_max_size                          = 4
+  mgmt_desired_size                      = 4
   create_cloudwatch_log_group            = false
   cloudwatch_log_group_retention_in_days = 30
-  cluster_enabled_log_types              = [] # For more information, see Amazon EKS Control Plane Logging documentation (https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
+  cluster_enabled_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+ # For more information, see Amazon EKS Control Plane Logging documentation (https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html)
 }
