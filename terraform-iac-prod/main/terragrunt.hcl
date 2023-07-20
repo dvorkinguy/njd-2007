@@ -1,8 +1,8 @@
 locals {
   source_url        = "git::git@github.com:dvorkinguy/njd-2007.git"
-  source_version    = "v0.1.3"
+  source_version    = "v0.1.4"
   deployment_prefix = "main-prod-dvorkinguy"
-  aws_region        = "us-west-2"
+  aws_region        = "us-east-1"
   eks_cluster_name  = "${local.deployment_prefix}-eks-cluster"
   default_tags = {
     "TerminationDate"  = "Permanent",
